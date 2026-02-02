@@ -6,6 +6,10 @@
       <h1>Cowabunga!</h1>
       <p class="tagline">Najsvježije pizze u hrvatskim kanalizacijama!</p>
       <a href="<?= BASE ?>ponuda.php" class="btn-primary">Čekiraj ponudu</a>
+      <br>
+      <br>
+      <br>
+      <p class="tagline">Želiš postati sam svoj superheroj? Probaj jedan od <a href="<?= BASE ?>recepti.php">ovih ukusnih recepata!</a></p>
     </div>
 
     <div class="hero-image">

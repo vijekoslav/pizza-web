@@ -12,6 +12,11 @@ function inparam(array $keys, $default = null)
   return $default;
 }
 
+$prefill_name = '';
+if (!empty($_SESSION['user_logged_in'])) {
+  $prefill_name = $_SESSION['user_name'];
+}
+
 $success = '';
 $error   = '';
 
@@ -202,7 +207,7 @@ if (isset($_POST['checkout'])) {
 
     <h2>Podaci za dostavu</h2>
     <form method="post" class="delivery-form">
-      <label>Ime i prezime <input name="name" required></label>
+      <label>Ime i prezime <input name="name" value="<?= h($prefill_name) ?>" autocomplete="name" required></label>
       <label>Telefon <input name="phone" required></label>
       <label>Adresa <input name="address" id="addr" autocomplete="off" required></label>
       <label>Grad <input name="city" id="city" required></label>

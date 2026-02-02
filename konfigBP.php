@@ -10,6 +10,14 @@ if (session_status() === PHP_SESSION_NONE) {
 
 define('BASE', '/pizza-web/');
 
+// Google OAuth (demo user login)
+define('GOOGLE_CLIENT_ID', '894454318340-rbbtu2fl3ggcaamppupjs92k798lc16q.apps.googleusercontent.com');
+define('GOOGLE_CLIENT_SECRET', 'secret');
+define('GOOGLE_REDIRECT_URI', 'http://localhost/pizza-web/oauth/google_callback.php');
+
+// gdje vratiti usera nakon logina
+define('LOGIN_REDIRECT', BASE);
+
 // --- PDO konekcija ---
 $DB_HOST = '127.0.0.1';
 $DB_NAME = 'pizza_web';

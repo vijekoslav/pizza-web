@@ -50,6 +50,12 @@ header .topnav a {
 header .topnav a:hover {
   color: #c33;
 }
+header .topnav span {
+  color: #fff;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
 header .cart {
   position: relative;
   font-size: 1.4rem;
@@ -641,4 +647,62 @@ pre {
   max-height: 180px;
   overflow: auto;
   margin: 0.25rem 0 1rem 0;
+}
+
+/* RECEPTI */
+.recipes-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.recipes-search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 12px 0 18px;
+}
+.recipes-search input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+.recipes-search button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+.recipes-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.recipe-card {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+.recipe-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.recipe-card__body {
+  padding: 12px;
+}
+.recipe-card h3 {
+  margin: 0 0 6px;
+}
+.recipe-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.recipe-links a {
+  font-size: 0.9rem;
+  text-decoration: underline;
 }

@@ -20,6 +20,7 @@
     <nav class="topnav">
       <?php if (!is_admin()): ?>
         <a href="<?= BASE ?>ponuda.php">Ponuda</a>
+        <a href="<?= BASE ?>recepti.php">Recepti</a>
       <?php endif; ?>
 
       <?php if (is_admin()): ?>
@@ -37,6 +38,19 @@
           <span class="cart-count" id="cart-count">
             <?= array_sum($_SESSION['cart'] ?? []) ?>
           </span>
+        </a>
+      <?php endif; ?>
+
+      <?php if (!empty($_SESSION['user_logged_in'])): ?>
+        <span class="nav-user">
+          <?= h($_SESSION['user_email']) ?>
+        </span>
+        <a href="<?= BASE ?>oauth/logout.php">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </a>
+      <?php else: ?>
+        <a href="<?= BASE ?>oauth/google_start.php">
+          <i class="fa-brands fa-google"></i>
         </a>
       <?php endif; ?>
 
